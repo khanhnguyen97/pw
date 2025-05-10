@@ -20,7 +20,7 @@
         {
             "label": "op-pya",
             "type": "shell",
-            "command": "while true; do node cl.js || true; echo 'Retrying cl.js in 10s...'; sleep 10; done",
+            "command": "while true; do node cl.js || true; echo 'Retrying cl.js in 30s...'; sleep 30; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
